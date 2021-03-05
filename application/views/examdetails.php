@@ -20,7 +20,7 @@
 </head>
 
 <body class="">
-  <body class="">
+  
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?php echo base_url()?>admin/assets/img/sidebar-1.jpg">
       <!--
@@ -28,53 +28,23 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="<?php echo base_url()?>Main/admin" class="simple-text logo-normal">
+      <div class="logo"><a href="<?php echo base_url()?>main/trainer" class="simple-text logo-normal">
           ACADEMIC CALENDER
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./batch.html">
-              <i class="material-icons">dashboard</i>
-              <p>ADD BATCH DETAILS</p>
-            </a>
-          </li>
+          
+          
+          
+          
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">dashboard</i>
-              <p>PERFORMANCE TRACKER</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>ACADEMIC EVENTS</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>TIMETABLES</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="">
               <i class="material-icons">bubble_chart</i>
               <p>EXAMS</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">notifications</i>
-              <p>Notification</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>CALENDAR</p>
-            </a>
-          </li>
+          
+          
           <!-- <li class="nav-item ">
             <a class="nav-link" href="./rtl.html">
               <i class="material-icons">language</i>
@@ -156,8 +126,17 @@
           </div>
         </div>
       </nav>
+      <div class="content mt-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card" style="width: 70rem; height:38rem;">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Exam details</h4>
+                  <p class="card-category"></p>
+                </div>
 <div class="card-body">
-                  <form method="post" action="<?php echo base_url()?>main/timetableadd">
+                  <form method="post" action="<?php echo base_url()?>main/examdetails">
                     <div class="container">
                     <div class="row">
                       <div class="col-md-5 mt-5">
@@ -188,66 +167,46 @@
                       </div>
                       <div class="col-md-5 mt-5">
                         <div class="form-group">
+                          <label class="bmd-label-floating">Exam</label>
+                          <input type="text" class="form-control"name="ename">
+                        </div>
+                      </div>
+                      <div class="col-md-5 mt-5">
+                        <div class="form-group">
                           <label class="bmd-label-floating">Date</label>
-                          <input type="date" class="form-control"name="date">
-                        </div>
-                      </div>
-                      <div class="col-md-5 mt-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">First Period</label>
-                          <input type="text" class="form-control"name="first">
+                          <input type="date" class="form-control"name="edate">
                         </div>
                       </div>
                       <div class="col-md-5">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Second Period</label>
-                          <input type="text" class="form-control"name="second">
+                          <label class="bmd-label-floating">Total mark</label>
+                          <input type="text" class="form-control"name="totalmark">
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Third Period</label>
-                          <input type="text" class="form-control"name="third">
+                          <label class="bmd-label-floating">subject</label>
+                          <input type="text" class="form-control"name="subject">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Fourth Period</label>
-                          <input type="text" class="form-control"name="fourth">
+                          <label class="bmd-label-floating">Starting Time</label>
+                          <input type="time" class="form-control"name="startingtime">
                         </div>
                       </div>
-                      <div class="col-md-5 mt-5">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Fifth Period</label>
-                          <input type="text" class="form-control"name="fifth">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Sixth Period</label>
-                          <input type="text" class="form-control"name="sixth">
+                          <label class="bmd-label-floating">Ending Time</label>
+                          <input type="time" class="form-control"name="endingtime">
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Seventh Period</label>
-                          <input type="text" class="form-control"name="seventh">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Eighth Period</label>
-                          <input type="text" class="form-control"name="eighth">
-                        </div>
-                      </div>
-
-
+                   
                     <button type="submit" class="btn btn-primary ">Submit</button>
-                    <button class="btn btn-primary "><a class="text-dark" href="<?php echo base_url()?>main/timetableview">VIEW</a></button>
+                    <button  class="btn btn-primary "><a class="text-white" href="<?php echo base_url()?>main/view_exam_details">View</a></button>
                     <div class="clearfix"></div>
                   </form>
                 </div>

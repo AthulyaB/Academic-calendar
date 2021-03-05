@@ -11,20 +11,23 @@
             <!---custom style---->
             <link rel="stylesheet" href="css/style.css">
     </head>
-<body>
-    <div class="content mt-5">
+<body class="">
+  <div class="logo"><a href="<?php echo base_url()?>main/trainer" class="simple-text logo-normal">
+          ACADEMIC CALENDER
+        </a></div>
+  <div class="content mt-5">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
               <div class="card" style="width: 83rem; height:38rem;">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Events</h4>
+                  <h4 class="card-title">Events details</h4>
                   <p class="card-category"></p>
                 </div>
-                <div class="card-body "> 
+                <div class="card-body ">
 
-                  <form class="form-group form form-control col-md-5 ">
-                    
+                  <form class="form-group form form-control col-md-5"  method="post" action="<?php echo base_url()?>main/addevent">
+                   
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group ">
@@ -36,14 +39,14 @@
                       <div class="col-md-5">
                         <div class="form-group ">
                           <label class="bmd-label-floating">Event Date</label>
-                          <input type="date" class="form-control"name="eventdate">
+                          <input type="date" class="form-control"name="date">
                         </div>
                       </div>
                       <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Event Time</label>
-                          <input type="time" class="form-control"name="eventtime">
+                          <input type="time" class="form-control"name="time">
                         </div>
                       </div>
                       <div class="row">
@@ -53,19 +56,24 @@
                           <input type="text" class="form-control"name="duration">
                         </div>
                       </div>
-                      
-                      
-                    
+                     
+                     
+                   
                       <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
                      
                     <button type="submit" class="btn btn-primary ">ADD EVENTS</button>
-                    
+                   <button  class="btn btn-primary "><a class="text-white" href="<?php echo base_url()?>main/eventdetail">VIEW EVENTS</a></button>
                 </table>
                   </form>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </body>
 
 <!---Jquery--->
@@ -81,5 +89,5 @@
 <!---Custom Js-->
 <script src="js/script.js">
 </script>
-</body>     
+</body>    
 </html>

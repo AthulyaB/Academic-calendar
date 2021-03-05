@@ -1,8 +1,4 @@
-<!--  
-  *@function name :Trainer Dashboard
-  *@ author :Athulya
-  *@ date:04/03/2021
-  -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,25 +28,25 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="<?php echo base_url()?>main/trainer" class="simple-text logo-normal">
           ACADEMIC CALENDER
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+          <li class="nav-item  ">
+            <a class="nav-link" href="<?php echo base_url()?>main/exam">
               <i class="material-icons">dashboard</i>
               <p>ADD EXAM DETAILS</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="<?php echo base_url()?>main/timetable">
               <i class="material-icons">dashboard</i>
               <p>ADD DAILY TIMETABLE</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="<?php echo base_url()?>main/events">
               <i class="material-icons">content_paste</i>
               <p>ADD EVENTS</p>
             </a>
@@ -63,18 +59,18 @@
           </li>
           
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="<?php echo base_url()?>main/notification">
               <i class="material-icons">notifications</i>
               <p>ADD NOTIFICATIONS</p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+          <li class="nav-item ">
+            <a class="nav-link" href="<?php echo base_url()?>main/holiday">
               <i class="material-icons">notifications</i>
-              <p></p>
+              <p>HOLIDAY</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./rtl.html">
               <i class="material-icons">language</i>
               <p>RTL Support</p>
