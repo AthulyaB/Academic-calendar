@@ -1,7 +1,7 @@
 <?php
 class mainmodel extends CI_model
 {
- public function selectpass2($email,$pass)
+  public function selectpass2($email,$pass)
 {
 $this->db->select('password');
 $this->db->from("login");
@@ -139,13 +139,6 @@ public function addevent($a)
 {
 $this->db->insert("event",$a);
 }
-/****
-*@Register
-*@Radhika
-*@date
-*@04/03/2021
-****/
-
 public function register($a)
 {
 
@@ -260,6 +253,255 @@ $qry=$this->db->get("notification");
 return $qry;
 
 }
+
+/****
+*@view event details function start
+*@Arsha
+*@date
+*@05/03/2021
+****/
+public function eventdetail()
+{
+
+$this->db->select('*');
+$qry=$this->db->get("event");
+return $qry;
+
+}
+/****
+*@Delete event details function start
+*@Arsha
+*@date
+*@05/03/2021
+****/
+public function deleteevent($id)
+{
+$this->db->select('*');
+$this->db->where('id',$id);
+$this->db->delete("event");
 }
 
+/****
+*@view event details by student function start
+*@Arsha
+*@date
+*@05/03/2021
+****/
+public function eventdetail2()
+{
+
+$this->db->select('*');
+$qry=$this->db->get("event");
+return $qry;
+
+}
+/****
+*@view event details by admin function start
+*@Arsha
+*@date
+*@05/03/2021
+****/
+public function eventdetail3()
+{
+
+$this->db->select('*');
+$qry=$this->db->get("event");
+return $qry;
+
+}
+  
+ /************
+
+*@exam notification view by student
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+
+public function viewexam($id)
+{
+$this->db->select('*');
+$this->db->from("login");
+$this->db->where("id",$id);
+$qry=$this->db->get()->row('usertype');
+if($qry==2)
+{
+$this->db->select('*');
+$this->db->where("b_id",'2');
+$qry=$this->db->get("exam");
+return $qry;
+
+
+}
+elseif($qry==3)
+{
+$this->db->select('*');
+$this->db->where("b_id",'1');
+$qry=$this->db->get("exam");
+return $qry;
+
+
+}
+else{
+echo "no data found";
+}
+
+
+}
+
+/************
+
+*@Exam Notification view by admin
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+public function examnotifications()
+{
+$this->db->select('*');
+
+$this->db->join('batch','batch.id=exam.b_id','inner');
+$qry=$this->db->get("exam");
+return $qry;
+
+}
+ /************
+
+*@Notification view by admin
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/  
+
+public function notifications()
+{
+$this->db->select('*');
+
+$this->db->join('batch','batch.id=notification.b_id','inner');
+$qry=$this->db->get("notification");
+return $qry;
+
+}
+
+/************
+
+*@Notification view by student
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+
+public function notificationviewstudent($id)
+{
+$this->db->select('*');
+$this->db->from("login");
+$this->db->where("id",$id);
+$qry=$this->db->get()->row('usertype');
+if($qry==2)
+{
+$this->db->select('*');
+$this->db->where("b_id",'2');
+$qry=$this->db->get("notification");
+return $qry;
+
+
+}
+elseif($qry==3)
+{
+$this->db->select('*');
+$this->db->where("b_id",'1');
+$qry=$this->db->get("notification");
+return $qry;
+
+
+}
+else{
+echo "no data found";
+}
+
+
+}
+
+
+
+/************
+
+*@Add Holidays by trainer
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+
+
+
+public function holiday()
+{
+$this->db->select('*');
+$qry=$this->db->get("batch");
+return $qry;
+
+}
+public function add_holiday($n)
+{
+$this->db->select('totalday');
+$this->db->from('batch');
+$this->db->where('id',$n);
+$qry=$this->db->get()->row('totalday');
+return $qry;
+}
+
+public function set_totalday($days,$n)
+{
+
+$this->db->set('totalday',$days,FALSE);
+$this->db->where('id',$n);
+$qry=$this->db->update('batch');
+
+}
+/************
+
+*@add timetable
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+
+public function timetable($a)
+{
+$this->db->insert("timetable",$a);
+
+}
+
+
+/************
+
+*@Timetable view by trainer
+*@Radhika Jaladharan
+*@date : 05/03/2021
+
+**************/
+public function timetabletrainer()
+{
+
+$this->db->select('*');
+$this->db->join('batch','batch.id=timetable.b_id','inner');
+$qry=$this->db->get("timetable");
+return $qry;
+
+}
+
+public function timetabledelete($id)
+{
+$this->db->where("id",$id);
+$this->db->delete("timetable");
+
+}
+public function batch1()
+{
+$this->db->select('*');
+$qry=$this->db->get("batch");
+return $qry;
+
+}
+}
 ?>
