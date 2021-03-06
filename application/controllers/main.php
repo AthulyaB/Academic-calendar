@@ -25,37 +25,68 @@ class main extends CI_Controller
 	// 	$this->load->view("admindashboard");
 
 	// }
+   /****
+*@Admin Dashboard view
+*@Athulya
+*@date
+*@06/03/2021
+****/
   public function admin()
   {
+    if($_SESSION['logged_in']==true && $_SESSION['usertype']=='0')
+        {
     
     $this->load->view("admindashboard");
+  }
+    else
+        {
+             redirect(base_url().'main/log');
+        }
 
   }
+   /****
+*@Student Dashboard view
+*@Athulya
+*@date
+*@06/03/2021
+****/
+
   public function student()
   {
+     if($_SESSION['logged_in']==true && $_SESSION['usertype']=='2')
+        {
     
     $this->load->view("studentdashboard");
+    }
+    else
+        {
+             redirect(base_url().'main/log');
+        }
 
   }
+  /****
+*@Trainer Dashboard view
+*@Athulya
+*@date
+*@06/03/2021
+****/
   public function trainer()
   {
+    if($_SESSION['logged_in']==true && $_SESSION['usertype']=='1')
+        {
+    
     
     $this->load->view("trainerdashboard");
+     }
+    else
+        {
+             redirect(base_url().'main/log');
+        }
+
 
   }
   
-
-  public function performance()
-  {
-    $this->load->view("performance");
-  }
-   public function calendar()
-  {
-    $this->load->view("calendar");
-  }
-   
-   
-   
+    
   /****
 *@Login function start
 *@Arsha
@@ -918,6 +949,84 @@ $this->mainmodel->timetabledelete($id);
 redirect('main/timetableview');
 }
 
+/****
+*@logout function start
+*@Arsha
+*@date
+*@06/03/2021
+****/
+public function logout()
+    {
+        $data=new stdClass();
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']===true)
+        {
+            foreach ($_SESSION as $key => $value)
+            {
+               unset($_SESSION[$key]);
+            }
+            $this->session->set_flashdata('logout_notification','logged_out');
+            redirect('main/log','refresh');
+        }
+        else{
+            redirect('main/log','refresh');
+        }
+    }
+
+
+/************
+
+*@View performance chart by admin
+*@Radhika Jaladharan
+*@date : 06/03/2021
+
+**************/
+
+public function chart()
+{
+  if($_SESSION['logged_in']==true && $_SESSION['usertype']=='0')
+        {
+$this->load->model('mainmodel');
+$data['n']=$this->mainmodel->mark();
+$this->load->view('chart',$data);
+}
+        else
+        {
+             redirect(base_url().'main/log');
+        }
+
+}
+
+/********
+*@calendar
+*@Sunu sukesan
+*@date : 06/03/2021
+
+**************/
+
+public function searchaction()
+    {
+      if($_SESSION['logged_in']==true && $_SESSION['usertype']=='2')
+        {
+        $this->load->model('mainmodel');
+        $date=$this->input->post("dat");
+        $batch=$this->input->post("bname");
+        $data['n']=$this->mainmodel->viewtimetable($date,$batch);
+        $this->load->view('fview',$data);
+      }
+       else
+        {
+             redirect(base_url().'main/log');
+        }
+
+
+    }
+    
+public function search()
+{
+$this->load->model('mainmodel');
+$data['n']=$this->mainmodel->viewdate();
+$this->load->view('search',$data);
+}
 
 
 }
