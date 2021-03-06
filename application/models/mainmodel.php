@@ -503,5 +503,44 @@ $qry=$this->db->get("batch");
 return $qry;
 
 }
+/************
+
+*@View performance chart by admin
+*@Radhika Jaladharan
+*@date : 06/03/2021
+
+**************/
+
+public function mark()
+{
+$this->db->select('*');
+$qry=$this->db->get("marks");
+return $qry;
+
+}
+/********
+*@search calendar
+*@sunu
+*@date : 06/03/2021
+
+**************/
+public function viewdate()
+{
+$this->db->select('*');
+$qry=$this->db->get("batch");
+return $qry;
+}
+
+public function viewtimetable($date,$batch)
+{
+$this->db->select('*');
+$qry=$this->db->join('batch','batch.id=timetable.b_id','inner');
+$this->db->where("timetable.date",$date);
+$this->db->where("timetable.b_id",$batch);
+$qry=$this->db->get('timetable');
+return $qry;
+}
+
+
 }
 ?>
