@@ -59,10 +59,13 @@ color: rgba(0,0,0,0.5);
 	</style>
 </head>
 <body class="bi">
+	<div class="logo"><a href="<?php echo base_url()?>main/trainer" class="simple-text logo-normal">
+          ACADEMIC CALENDER
+        </a></div>
 	
 <h3 class="bg-primary text-white text-center">EVENTS VIEW</h3>
 	<form method="post" action="">
-	<table class="table table-striped table-bordered table-hover table-dark">
+	<table class="table table-striped table-bordered table-hover table-info">
 		<tr>
 			<td>Event name</td>
 			<td>date</td>

@@ -28,12 +28,12 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="<?php echo base_url()?>Main/admin" class="simple-text logo-normal">
+      <div class="logo"><a href="<?php echo base_url()?>main/trainer" class="simple-text logo-normal">
           ACADEMIC CALENDER
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <!-- <li class="nav-item active  ">
             <a class="nav-link" href="./batch.html">
               <i class="material-icons">dashboard</i>
               <p>ADD BATCH DETAILS</p>
@@ -50,14 +50,14 @@
               <i class="material-icons">content_paste</i>
               <p>ACADEMIC EVENTS</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+            <a class="nav-link" href="<?php echo base_url()?>main/timetable">
               <i class="material-icons">library_books</i>
               <p>TIMETABLES</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./icons.html">
               <i class="material-icons">bubble_chart</i>
               <p>EXAMS</p>
@@ -74,7 +74,7 @@
               <i class="material-icons">notifications</i>
               <p>CALENDAR</p>
             </a>
-          </li>
+          </li> -->
           <!-- <li class="nav-item ">
             <a class="nav-link" href="./rtl.html">
               <i class="material-icons">language</i>
@@ -247,7 +247,7 @@
 
 
                     <button type="submit" class="btn btn-primary ">Submit</button>
-                    <button class="btn btn-primary "><a class="text-dark" href="<?php echo base_url()?>main/timetableview">VIEW</a></button>
+                    <button class="btn btn-primary "><a class="text-white" href="<?php echo base_url()?>main/timetableview">VIEW</a></button>
                     <div class="clearfix"></div>
                   </form>
                 </div>

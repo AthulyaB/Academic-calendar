@@ -46,7 +46,7 @@
 		
 		
 			<label class="bmd-label-floating">SELECT BATCH:</label>
-			<select name="bname" class="form-select ">
+			<select name="bname" class="form-select form-control">
 			<?php 
 			if($n->num_rows()>0)
 			{

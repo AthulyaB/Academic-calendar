@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,63 +167,105 @@
         <div background-image="<?php echo base_url()?>admin/assets/img/ad.png">
           </div>
       </nav>
-      <div class="">
-                  <div class="table-responsive col-10 ml-5">
-                    <table class="table table-hover table-bordered border-primary  mt-5 py-5 table-success">
-                    	<h3 class=" text-warning text-center">EVENTS VIEW</h3>
-                      <thead class=" text-dark">
-	
-<!-- h3 class=" text-warning text-center">EVENTS VIEW</h3>
-	<form method="post" action="">
-	<table class="table table-striped table-bordered table-hover table-info"> -->
-		<tr>
-			<td>Event name</td>
-			<td>date</td>
-			<td>Time</td>
-			<td>Duration</td>
-			
-			
-			</tr>
-			<?php
-			if($n->num_rows()>0)
-			{
-				foreach($n->result() as $row)
-				{
-					?>
-					<tr>
-						<td><?php echo $row->eventname;?></td>
-						<td><?php echo $row->date;?></td>
-						<td><?php echo $row->time;?></td>
-						<td><?php echo $row->duration;?></td>
-						
-						
-					</tr>
-						
-						
-						
-					<?php
-				}
-			}
-			
-				?>
-				
+          
+<strong><h3 class="h3">PERFORMANCE TRACKER</h3></strong>
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+<?php
+    if($n->num_rows()>0)
+    {
+      foreach($n->result() as $row)
+          {
+    ?>
+            
+             
 
 
-	</table>
-	
-</form>
-<!---Jquery--->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous">
+
+
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['PHP', <?php echo $row->php?>],
+  ['Laravel', <?php echo $row->laravel?>],
+  ['IT', <?php echo $row->it?>],
+  ['English', <?php echo $row->english?>],
+  ['Python', <?php echo $row->python?>],
+  ['java', <?php echo $row->java?>]
+]);
+
+
+  <?php
+        }
+      }
+      ?>
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':' PORTION COMPLETED', 'width':700, 'height':700};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
 </script>
+<div id="piechart"></div>
 
-<!---Popper---->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+<?php
+    if($n->num_rows()>0)
+    {
+      foreach($n->result() as $row)
+          {
+    ?>
+            
+             
+
+
+
+
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['PHP', <?php echo $row->php?>],
+  ['Laravel', <?php echo $row->laravel?>],
+  ['IT', <?php echo $row->it?>],
+  ['English', <?php echo $row->english?>],
+  ['Python', <?php echo $row->python?>],
+  ['java', <?php echo $row->java?>]
+]);
+
+
+  <?php
+        }
+      }
+      ?>
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':' PORTION COMPLETED', 'width':700, 'height':700};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
 </script>
-
-<!---Custom Js-->
-<script src="js/script.js">
 
 </body>
 </html>

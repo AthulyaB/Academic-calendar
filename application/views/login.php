@@ -11,6 +11,14 @@
             <!---custom style---->
             <link rel="stylesheet" href="../css/styl.css">
     </head>
+    <style>
+      body
+  {
+    background-image:url("../img/.jpg");
+    background-size: cover;
+
+  }
+</style>
     <body >
       <!-- Header start -->
   <header>

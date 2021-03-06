@@ -54,7 +54,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="<?php echo base_url()?>main/performance">
+            <a class="nav-link" href="<?php echo base_url()?>main/chart">
               <i class="material-icons">dashboard</i>
               <p>PERFORMANCE TRACKER</p>
             </a>
@@ -65,12 +65,12 @@
               <p>ACADEMIC EVENTS</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>main/timetable">
               <i class="material-icons">library_books</i>
               <p>TIMETABLES</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>main/examnotification">
               <i class="material-icons">bubble_chart</i>
@@ -159,7 +159,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>main/log">Log out</a>
                 </div>
               </li>
             </ul>

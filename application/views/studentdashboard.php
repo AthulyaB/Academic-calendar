@@ -19,6 +19,14 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url()?>admin/assets/demo/demo.css" rel="stylesheet" />
 </head>
+<!-- <style>
+  body
+  {
+    background-image:url("../img/st.jpg");
+    background-size: cover;
+
+  }
+  </style> -->
 
 <body class="">
   <div class="wrapper ">
@@ -28,11 +36,12 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="<?php echo base_url()?>main/student" class="simple-text logo-normal">
           ACADEMIC CALENDER
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+          
           <li class="nav-item   ">
             <a class="nav-link" href="<?php echo base_url()?>main/viewexam">
               <i class="material-icons">dashboard</i>
@@ -40,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="<?php echo base_url()?>main/">
+            <a class="nav-link" href="<?php echo base_url()?>main/search">
               <i class="material-icons">dashboard</i>
               <p>VIEW DAILY TIMETABLE</p>
             </a>
@@ -63,12 +72,7 @@
               <p>VIEW BATCH DETAILS</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">notifications</i>
-              <p>VIEW MESSAGE</p>
-            </a>
-          </li>
+          
           <!-- <li class="nav-item ">
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>
@@ -103,7 +107,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end">
+          <div class="collapse navbar-collapse justify-content-end text-white">
             <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -149,7 +153,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="<?php echo base_url()?>main/log">Log out</a>
                 </div>
               </li>
             </ul>
@@ -157,8 +161,7 @@
         </div>
       </nav>
       <!-- End Navbar -->
-      <div>
-        <img src=""
+      
       
   <!--   Core JS Files   -->
   <script src="<?php echo base_url()?>admin/assets/js/core/jquery.min.js"></script>

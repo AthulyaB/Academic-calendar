@@ -62,7 +62,7 @@ color: rgba(0,0,0,0.5);
 	
 <h3 class="bg-primary text-white text-center">BATCH VIEW</h3>
 	<form method="post" action="">
-	<table class="table table-striped table-bordered table-hover table-dark">
+	<table class="table table-striped table-bordered table-hover table-info">
 		<tr>
 			<td>Batch name</td>
 			<td>Start date</td>
