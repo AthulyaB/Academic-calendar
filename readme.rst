@@ -1,70 +1,60 @@
-###################
-What is CodeIgniter
-###################
+Purpose
+The aim of this software is to develop an academic calendar based on academic
+schedules and events. This should be used in an effective way so that various advantages are
+obtained from the software. Software means establishment of sound and in-depth
+development of a task using high-level language that results in well-equipped, economical
+software, which is reliable. The introduction may be divided into various steps based on the
+developer and also depending upon the operation to be performed using the particular
+software. The “ACADEMIC CALENDAR” undertakes as a project based on relevant
+technologies. The main aim of this project is to develop the software for the process of
+analysing the academic activities and scheduled days of task in a single calendar view. It lead
+to increased efficiency and reduced drawbacks which were present in the previous procedure
+of academic managing systems such that all these works are done manually. This system will
+be very helpful for both trainers and students for better understanding of their responsibilities
+and could schedule accordingly. Our system also provides easy availability.
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Scope
+This project designs and implements ACADEMIC CALENDAR to fulfill all the
+vision statements. Supported by a well designed database, all scheduled classes,events,exams
+information is integrated together and can be accessed easily through a single point. A
+friendly user interface is provided so that various combinations of search criteria can be
+fetched from user and generates corresponding database search statements. ACADEMIC
+CALENDAR provide both customer and administration interfaces with the latter used for
+administration purposes.
 
-*******************
-Release Information
-*******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Overview
+ACADEMIC CALENDAR is an Internet-based application executing on a Web server
+and connected to enterprise databases. ACADEMIC CALENDAR accepts and processes
+requests from three patrons: Trainers, Students and Admin. Besides the local server database
+(for storing scheduling records).
+The system is expected to have a Web user interface for customers and an
+authorization based Web interface for administrators. Its final release has merits of being
+efficient and precise in academic calendar managing, consistent in analysing academic classes
+scheduling. Processing and secure in credential data transmission.
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
-*******************
-Server Requirements
-*******************
+System Overview
+REQUIREMENT ANALYSIS
+Requirements are prone to issues of the ambiguity, incompleteness and inconsistency
+techniques such as rigorous inspection have been shown to help deal with these issues.
+Ambiguity, incompleteness and inconsistencies that can be resolved in the requirement phase
+typically cost orders of the magnitude less to correct than when these same issues are found in
+later stages of product development. The purpose of developing the specified software is to
+describe the analysis involved in managing the academic activities scheduled in form of an
+academic calendar.
 
-PHP version 5.6 or newer is recommended.
+ FUNCTIONAL ANALYSIS
+Input: Collecting the details about the available academic days.
+Output: Scheduling the tasks, exams, events, timetables accordingly in a
+calendar manner.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+ PROCESS
+ Add Batch details
+ Performance Tracker.
+ Add academic events .
+ View timetable/exams/notification.
+ Add exam details,daily timetables,events.
+ Add notification.
+ View batch details.
