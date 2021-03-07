@@ -1,4 +1,9 @@
-
+<!-- 
+@Student Dashboard view
+*@Athulya
+*@date
+*@06/03/2021
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,14 +24,14 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url()?>admin/assets/demo/demo.css" rel="stylesheet" />
 </head>
-<!-- <style>
+<style>
   body
   {
-    background-image:url("../img/st.jpg");
+    background-image:url("../img/c.jpg");
     background-size: cover;
 
   }
-  </style> -->
+  </style>
 
 <body class="">
   <div class="wrapper ">
@@ -94,12 +99,12 @@
         </ul>
       </div>
     </div>
-    <div class="main-panel bg-dark">
+    <div class="main-panel ">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid text-white ">
           <div class="navbar-wrapper">
-            <a class="navbar-brand text-white" href="javascript:;">STUDENT</a>
+            <a class="navbar-brand text-dark h2" href="javascript:;">STUDENT</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

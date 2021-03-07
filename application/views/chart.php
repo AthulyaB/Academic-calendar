@@ -1,3 +1,9 @@
+<!-- 
+@Performance Chart
+*@Athulya
+*@date
+*@06/03/2021
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,12 +46,12 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <p>CALENDAR</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item   ">
             <a class="nav-link" href="<?php echo base_url()?>main/batch">
               <i class="material-icons">dashboard</i>

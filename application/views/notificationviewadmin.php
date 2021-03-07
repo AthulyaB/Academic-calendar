@@ -1,3 +1,9 @@
+<!-- 
+@Notification view by admin
+*@Athulya
+*@date
+*@06/03/2021
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +28,7 @@
 <style >
   body
   {
-    background-image:url("../img/.jpg");
+    background-image:url("../img/usr.jpg");
     background-size: cover;
   }
 </style>
@@ -40,12 +46,12 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <p>CALENDAR</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item   ">
             <a class="nav-link" href="<?php echo base_url()?>main/batch">
               <i class="material-icons">dashboard</i>
@@ -167,9 +173,10 @@
         <div background-image="<?php echo base_url()?>admin/assets/img/ad.png">
           </div>
       </nav>
-
+<div class="col-10 ">
   <h2 class="text-warning text-center py-3">NOTIFICATIONS</h2>
-  <table class="table table-hover table-bordered  text-center table-info mt-5 ml-5  ">
+  <table class="table table-hover table-bordered  text-center table-info mt-5   ">
+  </div>
     <thead>
       <tr class>
         <th>ID</th>

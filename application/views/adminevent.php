@@ -1,4 +1,9 @@
-
+<!-- 
+@Add Event 
+*@Athulya
+*@date
+*@06/03/2021
+ -->
 
 
 <!DOCTYPE html>
@@ -22,13 +27,13 @@
   <link href="<?php echo base_url()?>admin/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<!-- <style >
+<style >
   body
   {
-    background-image:url("../img/c.jpg");
+    background-image:url("../img/ca.jpg");
     background-size: cover;
   }
-</style> -->
+</style>
 
 <body class="">
   <div class="wrapper ">
@@ -43,12 +48,12 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <p>CALENDAR</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item   ">
             <a class="nav-link" href="<?php echo base_url()?>main/batch">
               <i class="material-icons">dashboard</i>
@@ -172,8 +177,8 @@
       </nav>
       <div class="">
                   <div class="table-responsive col-10 ml-5">
-                    <table class="table table-hover table-bordered border-primary  mt-5 py-5 table-success">
-                    	<h3 class=" text-warning text-center">EVENTS VIEW</h3>
+                    <table class="table table-hover table-bordered border-primary  mt-5 py-5 table-info">
+                    	<h3 class=" text-white h2 text-center">EVENTS VIEW</h3>
                       <thead class=" text-dark">
 	
 <!-- h3 class=" text-warning text-center">EVENTS VIEW</h3>
@@ -212,9 +217,17 @@
 				
 
 
-	</table>
 	
+</thead>
+</table>
+</div>
+</div>
+</div>
+</div>
 </form>
+</body>
+	
+
 <!---Jquery--->
 <script
   src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

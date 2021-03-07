@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+
+<!-- 
+@Exam Details view by admin
+*@Athulya
+*@date
+*@06/03/2021
+ --><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,12 +46,12 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url()?>">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <p>CALENDAR</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item   ">
             <a class="nav-link" href="<?php echo base_url()?>main/batch">
               <i class="material-icons">dashboard</i>
@@ -172,7 +178,7 @@
 
 
 <div class="ml-5 mr-5">
-  <h2 class="text-primary text-center py-3">NOTIFICATIONS</h2>
+  <h2 class="text-primary text-center py-3"> EXAM NOTIFICATIONS</h2>
   <table class="table table-hover table-bordered border-primary text-center table-success mt-5 ">
     <thead>
       <tr class>
