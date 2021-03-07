@@ -36,20 +36,6 @@ scheduling. Processing and secure in credential data transmission.
 
 
 System Overview
-REQUIREMENT ANALYSIS
-Requirements are prone to issues of the ambiguity, incompleteness and inconsistency
-techniques such as rigorous inspection have been shown to help deal with these issues.
-Ambiguity, incompleteness and inconsistencies that can be resolved in the requirement phase
-typically cost orders of the magnitude less to correct than when these same issues are found in
-later stages of product development. The purpose of developing the specified software is to
-describe the analysis involved in managing the academic activities scheduled in form of an
-academic calendar.
-
- FUNCTIONAL ANALYSIS
-Input: Collecting the details about the available academic days.
-Output: Scheduling the tasks, exams, events, timetables accordingly in a
-calendar manner.
-
  PROCESS
  Add Batch details
  Performance Tracker.
